@@ -1,0 +1,395 @@
+:root {
+    --bg: #020617;
+    --card: #0f172a;
+    --primary: #14b8a6;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --border: #1e293b;
+    --error: #ef4444;
+    --radius: 14px;
+}
+
+body.light {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --primary: #14b8a6;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+}
+
+
+
+/* =========================
+   RESET & BASE
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Index */
+
+
+/* =========================
+   LANDING PAGE
+========================= */
+
+.landing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+}
+
+.brand-name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.brand-name span {
+    color: var(--primary);
+}
+
+.landing-nav a {
+    margin-left: 18px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* HERO */
+.landing-hero {
+    text-align: center;
+    padding: 90px 24px 50px;
+}
+
+.landing-hero h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.landing-hero p {
+    max-width: 640px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* FEATURES */
+.landing-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 40px 32px 70px;
+}
+
+.feature-card {
+    background: var(--card);
+    padding: 26px;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* FOOTER */
+.landing-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    text-decoration: none;
+    padding: 1rem;
+    margin: 0;
+}
+
+header nav.btn {
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .landing-hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .btn {
+        margin: auto;
+        width: 100%;
+    }
+}
+
+/* sigup page & login page*/
+
+/* =========================
+   AUTH LAYOUT
+========================= */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 36px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   HEADER
+========================= */
+.auth-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.auth-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.auth-header p {
+    font-size: 14px;
+    margin-top: 6px;
+    color: var(--muted);
+}
+
+.auth-header span {
+    color: var(--primary);
+}
+
+/* =========================
+   FORM
+========================= */
+.auth-form {
+    width: 100%;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: var(--muted);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: #64748b;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+}
+
+/* =========================
+   PASSWORD TOGGLE
+========================= */
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 38px;
+    font-size: 14px;
+    color: var(--muted);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* =========================
+   INLINE ERRORS
+========================= */
+.error {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--error);
+}
+
+.error-input {
+    border-color: var(--error) !important;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    background: var(--primary);
+    color: #020617;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 12px 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.auth-footer {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted);
+}
+
+.forgot {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--card);
+    padding: 32px;
+    border-radius: var(--radius);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* =========================
+   STUDENT ID BOX
+========================= */
+.student-id {
+    margin: 16px 0;
+    padding: 14px;
+    background: var(--bg);
+    border-radius: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 18px;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.note {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 26px;
+    }
+}
+
+
+

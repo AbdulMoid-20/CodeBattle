@@ -1,0 +1,29 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (transparent, works on dark theme) -->
+
+  <!-- Left white triangle -->
+  <polygon points="40,20 20,40 40,60"
+           fill="#ffffff"/>
+
+  <!-- Right teal triangle -->
+  <polygon points="50,20 70,40 50,60"
+           fill="#14b8a6"/>
+
+  <!-- Text: Code -->
+  <text x="75" y="50"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="32"
+        font-weight="500"
+        fill="#ffffff">
+    Code
+  </text>
+
+  <!-- Text: Battle -->
+  <text x="155" y="50"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="32"
+        font-weight="500"
+        fill="#14b8a6">
+    Battle
+  </text>
+</svg>
