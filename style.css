@@ -36,127 +36,6 @@ body {
     color: var(--text);
 }
 
-/* Index */
-
-
-/* =========================
-   LANDING PAGE
-========================= */
-
-.landing-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 32px;
-}
-
-.brand-name {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.brand-name span {
-    color: var(--primary);
-}
-
-.landing-nav a {
-    margin-left: 18px;
-    text-decoration: none;
-    color: var(--text);
-    font-size: 14px;
-}
-
-/* HERO */
-.landing-hero {
-    text-align: center;
-    padding: 90px 24px 50px;
-}
-
-.landing-hero h1 {
-    font-size: 40px;
-    line-height: 1.2;
-    margin-bottom: 16px;
-}
-
-.landing-hero p {
-    max-width: 640px;
-    margin: 0 auto 30px;
-    color: var(--muted);
-    font-size: 15px;
-}
-
-.hero-actions {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-}
-
-/* FEATURES */
-.landing-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
-    padding: 40px 32px 70px;
-}
-
-.feature-card {
-    background: var(--card);
-    padding: 26px;
-    border-radius: var(--radius);
-    text-align: center;
-}
-
-.feature-card h3 {
-    margin-bottom: 10px;
-}
-
-.feature-card p {
-    font-size: 14px;
-    color: var(--muted);
-}
-
-/* FOOTER */
-.landing-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 13px;
-    color: var(--muted);
-}
-
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    text-decoration: none;
-    padding: 1rem;
-    margin: 0;
-}
-
-header nav.btn {
-    width: 100%;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    .landing-hero h1 {
-        font-size: 32px;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .btn {
-        margin: auto;
-        width: 100%;
-    }
-}
-
 /* sigup page & login page*/
 
 /* =========================
@@ -392,4 +271,123 @@ header nav.btn {
 }
 
 
+/* Main Page*/
 
+
+/* =========================
+   LANDING PAGE
+========================= */
+
+.landing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+}
+
+.brand-name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.brand-name span {
+    color: var(--primary);
+}
+
+.landing-nav a {
+    margin-left: 18px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* HERO */
+.landing-hero {
+    text-align: center;
+    padding: 90px 24px 50px;
+}
+
+.landing-hero h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.landing-hero p {
+    max-width: 640px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* FEATURES */
+.landing-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 40px 32px 70px;
+}
+
+.feature-card {
+    background: var(--card);
+    padding: 26px;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* FOOTER */
+.landing-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    text-decoration: none;
+    padding: 1rem;
+    margin: 0;
+}
+
+header nav.btn {
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .landing-hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .btn {
+        margin: auto;
+        width: 100%;
+    }
+}
