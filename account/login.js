@@ -59,7 +59,8 @@ loginForm.addEventListener("submit", e => {
         return;
     }
 
-    window.location.href = "dashboard.html";
+    localStorage.setItem("codebattleLoggedIn", "true");
+    window.location.href = "../dashboard.html";
 });
 }
 
