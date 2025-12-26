@@ -10,7 +10,7 @@
            fill="#14b8a6"/>
 
   <!-- Text: Code -->
-  <text x="75" y="50"
+  <text x="85" y="50"
         font-family="Poppins, Arial, sans-serif"
         font-size="32"
         font-weight="500"
@@ -19,7 +19,7 @@
   </text>
 
   <!-- Text: Battle -->
-  <text x="155" y="50"
+  <text x="168" y="50"
         font-family="Poppins, Arial, sans-serif"
         font-size="32"
         font-weight="500"

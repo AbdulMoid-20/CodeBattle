@@ -362,7 +362,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: fit-content;
     text-decoration: none;
     padding: 1rem;
     margin: 0;
@@ -391,3 +391,496 @@ header nav.btn {
         width: 100%;
     }
 }
+
+
+/* dashboard page */
+
+/* navigation sidebar */
+ /* dashboard page */
+
+ /* navigation sidebar */
+ .navigation {
+     position: fixed;
+     width: 300px;
+     height: 100%;
+     background: var(--card);
+     border-left: 10px solid var(--card);
+     transition: 0.5s;
+     overflow: hidden;
+ }
+
+ .navigation.active {
+     width: 80px;
+ }
+
+ .navigation ul {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+ }
+
+ .navigation ul li {
+     position: relative;
+     width: 100%;
+     list-style: none;
+     border-top-left-radius: 30px;
+     border-bottom-left-radius: 30px;
+ }
+
+ .navigation ul li:hover,
+ .navigation ul li.hovered {
+     background-color: var(--bg);
+ }
+
+ .navigation ul>a  {
+     font-size: 2rem;
+     margin-bottom: 40px;
+     pointer-events: none;
+     margin-left: -15px;
+ }
+
+ .navigation ul li a {
+     position: relative;
+     display: block;
+     width: 100%;
+     display: flex;
+     text-decoration: none;
+     color: var(--text);
+ }
+
+ .navigation ul li:hover a,
+ .navigation ul li.hovered a {
+     color: var(--primary);
+ }
+
+ .navigation ul li a .icon {
+     position: relative;
+     display: block;
+     min-width: 60px;
+     height: 60px;
+     line-height: 75px;
+     text-align: center;
+ }
+
+ .navigation ul li a .title {
+     position: relative;
+     display: block;
+     padding: 0 10px;
+     height: 50px;
+     line-height: 60px;
+     text-align: start;
+     white-space: nowrap;
+ }
+
+ .navigation ul li:hover a::before,
+ .navigation ul li.hovered a::before {
+     content: "";
+     position: absolute;
+     right: 0;
+     top: -50px;
+     width: 50px;
+     height: 50px;
+     background-color: transparent;
+     border-radius: 50%;
+     box-shadow: 35px 35px 0 10px var(--bg);
+     pointer-events: none;
+ }
+
+ .navigation ul li:hover a::after,
+ .navigation ul li.hovered a::after {
+     content: "";
+     position: absolute;
+     right: 0;
+     bottom: -50px;
+     width: 50px;
+     height: 50px;
+     background-color: transparent;
+     border-radius: 50%;
+     box-shadow: 35px -35px 0 10px var(--bg);
+     pointer-events: none;
+ }
+
+ /* main */
+ .main {
+     position: absolute;
+     width: calc(100% - 300px);
+     left: 300px;
+     min-height: 100vh;
+     background: var(--bg);
+     transition: 0.5s;
+ }
+
+ .main.active {
+     width: calc(100% - 80px);
+     left: 80px;
+ }
+
+ .topbar {
+     width: 100%;
+     height: 60px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 10px;
+ }
+
+ .toggle {
+     position: relative;
+     width: 60px;
+     height: 60px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2.5rem;
+     cursor: pointer;
+ }
+
+ .toggle .menu {
+     color: var(--primary);
+ }
+
+ .search {
+     position: relative;
+     width: 400px;
+     margin: 0 10px;
+ }
+
+ .search label {
+     position: relative;
+     width: 100%;
+ }
+
+ .search label input {
+     width: 100%;
+     height: 40px;
+     border-radius: 40px;
+     padding: 5px 20px;
+     padding-left: 35px;
+     font-size: 18px;
+     outline: none;
+     border: 1px solid var(--black2);
+ }
+
+ .search label ion-icon {
+     position: absolute;
+     top: 0;
+     left: 10px;
+     font-size: 1.2rem;
+ }
+
+ .user {
+     position: relative;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     overflow: hidden;
+     cursor: pointer;
+ }
+
+ .user img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border: 2px solid var(--primary);
+     border-radius: 50%;
+     object-fit: cover;
+ }
+
+ .user-theme {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 2rem;
+ }
+
+ /* theme swith */
+ .switch {
+     position: relative;
+     width: 46px;
+     height: 22px;
+     background: var(--primary);
+     border-radius: 30px;
+     cursor: pointer;
+ }
+
+ .slider {
+     position: absolute;
+     top: 3px;
+     left: 3px;
+     width: 16px;
+     height: 16px;
+     background: var(--card);
+     border-radius: 50%;
+     transition: transform 0.3s ease;
+     z-index: 1;
+ }
+
+ body.light .slider {
+     transform: translateX(24px);
+ }
+
+ .switch .icon {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     z-index: 2;
+     font-size: 13px;
+     color: var(--text);
+     pointer-events: none;
+ }
+
+ .switch .moon {
+     top: 54.5%;
+     right: 61%;
+ }
+
+ .switch .sun {
+     top: 54.5%;
+     left: 63%;
+
+ }
+
+ .switch .moon i {
+     color: #facc15;
+     font-weight: 600;
+
+ }
+
+ .switch .sun i {
+     color: #020617;
+     font-weight: 600;
+
+ }
+
+ /* DARK MODE (default) */
+ body:not(.light) .switch .moon {
+     opacity: 1;
+ }
+
+ body:not(.light) .switch .sun {
+     opacity: 0;
+ }
+
+ /* LIGHT MODE */
+ body.light .switch .sun {
+     opacity: 1;
+ }
+
+ body.light .switch .moon {
+     opacity: 0;
+ }
+
+/* =========================
+   DASHBOARD – FIRST VERSION UPGRADE
+========================= */
+
+.dashboard-content {
+    padding: 24px;
+}
+
+/* Top widgets */
+.top-widgets {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+/* Welcome */
+.welcome-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: var(--radius);
+}
+
+.welcome-card h2 span {
+    color: var(--primary);
+}
+
+.welcome-card p {
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+.student-id {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* Stats cards */
+.stats-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.stat-card {
+    background: var(--card);
+    padding: 16px;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.stat-card span {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    margin-top: 6px;
+}
+
+/* chart */
+.chart-card {
+    margin-top: 24px;
+    background: var(--card);
+    padding: 20px;
+    border-radius: var(--radius);
+}
+
+.chart-card canvas {
+    width: 100% !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .top-widgets {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   DAILY CHALLENGE
+========================= */
+.challenge-card {
+    background: linear-gradient(135deg, var(--primary), #0d9488);
+    color: #fff;
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-top: 24px;
+}
+
+.challenge-card p {
+    margin: 8px 0;
+    opacity: 0.9;
+}
+
+.challenge-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: 12px 0;
+}
+
+.challenge-card .btn-primary {
+    background: #fff;
+    color: #0d9488;
+}
+
+/* =========================
+   RECENT QUIZZES
+========================= */
+.recent-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-top: 24px;
+}
+
+.recent-card ul {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.recent-card li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.recent-card li:last-child {
+    border-bottom: none;
+}
+
+.score {
+    font-weight: 600;
+}
+
+/* =========================
+   CHART ANIMATION
+========================= */
+.bar::before {
+    animation: growBar 1s ease forwards;
+}
+
+@keyframes growBar {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: var(--value);
+    }
+}
+
+
+ /* =========================
+   MOBILE SIDEBAR FIX
+========================= */
+ @media (max-width: 768px) {
+
+     /* Hide sidebar completely */
+     .navigation {
+         left: -300px;
+         width: 300px;
+         z-index: 1000;
+     }
+
+     /* Show sidebar when active */
+     .navigation.active {
+         left: 0;
+         width: 300px;
+     }
+
+     /* Main takes full width */
+     .main {
+         width: 100%;
+         left: 0;
+     }
+
+     /* Prevent desktop collapse behavior */
+     .navigation.active ul li a .title {
+         display: inline-block;
+     }
+
+     /* Disable icon-only preview */
+     .navigation ul li a .icon {
+         min-width: 60px;
+     }
+
+     /* Topbar stays fixed */
+     .topbar {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         background: var(--bg);
+         z-index: 900;
+     }
+
+     /* Push content below topbar */
+     .main {
+         padding-top: 60px;
+     }
+ }
+
+
+ 

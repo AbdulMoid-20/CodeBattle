@@ -102,9 +102,29 @@ if (signupForm) {
     // ==========================
     // COPY STUDENT ID
     // ==========================
+    // copyBtn.addEventListener("click", () => {
+    //     navigator.clipboard.writeText(studentIdText.textContent);
+    //     copyBtn.textContent = "Copied ✔";
+    //     setTimeout(() => (copyBtn.textContent = "Copy Student ID"), 2000);
+    // });
+
     copyBtn.addEventListener("click", () => {
-        navigator.clipboard.writeText(studentIdText.textContent);
+        const text = studentIdText.textContent;
+
+        // Mobile-safe fallback
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // mobile
+
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+
         copyBtn.textContent = "Copied ✔";
-        setTimeout(() => (copyBtn.textContent = "Copy Student ID"), 2000);
+        setTimeout(() => {
+            copyBtn.textContent = "Copy Student ID";
+        }, 2000);
     });
+
 }
