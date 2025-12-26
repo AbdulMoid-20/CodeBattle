@@ -76,14 +76,14 @@ if (logoutBtn) {
 // ==========================
 // QUIZ DATA
 // ==========================
-const quizResults =
-    JSON.parse(localStorage.getItem("quizResults")) || [
-        { date: "Mon", score: 70 },
-        { date: "Tue", score: 85 },
-        { date: "Wed", score: 60 },
-        { date: "Thu", score: 90 },
-        { date: "Fri", score: 75 }
-    ];
+// const quizResults =
+//     JSON.parse(localStorage.getItem("quizResults")) || [
+//         { date: "Mon", score: 70 },
+//         { date: "Tue", score: 85 },
+//         { date: "Wed", score: 60 },
+//         { date: "Thu", score: 90 },
+//         { date: "Fri", score: 75 }
+//     ];
 
 localStorage.setItem("quizResults", JSON.stringify(quizResults));
 
